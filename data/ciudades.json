@@ -1,0 +1,31 @@
+{
+    "ciudades": [
+        {
+            "nombre": "Cusco",
+            "imagen": "img/cusco.jpg",
+            "rutas": [
+                {
+                    "nombre": "Ruta de los Incas",
+                    "duracion": "3 días",
+                    "lugares": ["Machu Picchu", "Valle Sagrado", "Ollantaytambo"]
+                },
+                {
+                    "nombre": "Ruta Arqueológica",
+                    "duracion": "2 días", 
+                    "lugares": ["Sacsayhuamán", "Qorikancha", "Plaza de Armas"]
+                }
+            ]
+        },
+        {
+            "nombre": "Lima",
+            "imagen": "img/lima.jpg", 
+            "rutas": [
+                {
+                    "nombre": "Tour Histórico",
+                    "duracion": "1 día",
+                    "lugares": ["Centro Histórico", "Barranco", "Miraflores"]
+                }
+            ]
+        }
+    ]
+}
