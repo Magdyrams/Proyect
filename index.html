@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turismo en Perú</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <header>
+        <h1>Turismo en Perú</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#rutas">Rutas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio">
+        <h2>Descubre Perú</h2>
+        <p>Perú es un país lleno de maravillas naturales, cultura milenaria y gastronomía única. Explora sus destinos más emblemáticos.</p>
+    </section>
+
+    <section id="rutas">
+        <h2>Rutas Turísticas</h2>
+        <p>Selecciona una provincia para obtener una ruta recomendada:</p>
+        <form id="form-rutas" action="rutas.php" method="POST">
+            <select name="provincia" id="provincia">
+                <option value="">-- Selecciona una provincia --</option>
+                <option value="cusco">Cusco</option>
+                <option value="arequipa">Arequipa</option>
+                <option value="lima">Lima</option>
+                <option value="iquitos">Iquitos</option>
+            </select>
+            <button type="submit">Ver Ruta</button>
+        </form>
+        <div id="ruta-recomendada">
+            <?php
+            // Mostrar la ruta si se ha enviado el formulario
+            if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['provincia'])) {
+                include 'rutas.php'; // Incluimos el archivo que procesa la lógica
+            }
+            ?>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>¿Tienes preguntas? Escríbenos a <a href="mailto:info@turismoperu.com">info@turismoperu.com</a>.</p>
+    </section>
+</body>
+</html>
